@@ -6,6 +6,10 @@
     "api/sms.js": {
       "memory": 128,
       "maxDuration": 10
+    },
+    "api/voice.js": {
+      "memory": 128,
+      "maxDuration": 10
     }
   }
 }

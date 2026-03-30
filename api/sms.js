@@ -2,8 +2,9 @@
 // Sends two-step outreach texts from Mission Control
 
 export default async function handler(req, res) {
-    // CORS
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    // CORS — restrict to Mission Control origin
+    const allowedOrigin = process.env.MISSION_CONTROL_ORIGIN || 'https://oktd-mission-control.vercel.app';
+    res.setHeader('Access-Control-Allow-Origin', allowedOrigin);
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
