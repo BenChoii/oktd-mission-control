@@ -1,1 +1,61 @@
-{"data":"Ly8gVmVyY2VsIFNlcnZlcmxlc3MgRnVuY3Rpb24g4oCUIE91dHJlYWNoIFNNUyB2aWEgVHdpbGlvCi8vIFNlbmRzIHR3by1zdGVwIG91dHJlYWNoIHRleHRzIGZyb20gTWlzc2lvbiBDb250cm9sCgpleHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiBoYW5kbGVyKHJlcSwgcmVzKSB7CiAgICAvLyBDT1JTCiAgICByZXMuc2V0SGVhZGVyKCdBY2Nlc3MtQ29udHJvbC1BbGxvdy1PcmlnaW4nLCAnKicpOwogICAgcmVzLnNldEhlYWRlcignQWNjZXNzLUNvbnRyb2wtQWxsb3ctTWV0aG9kcycsICdQT1NULCBPUFRJT05TJyk7CiAgICByZXMuc2V0SGVhZGVyKCdBY2Nlc3MtQ29udHJvbC1BbGxvdy1IZWFkZXJzJywgJ0NvbnRlbnQtVHlwZScpOwoKICAgIGlmIChyZXEubWV0aG9kID09PSAnT1BUSU9OUycpIHJldHVybiByZXMuc3RhdHVzKDIwMCkuZW5kKCk7CiAgICBpZiAocmVxLm1ldGhvZCAhPT0gJ1BPU1QnKSByZXR1cm4gcmVzLnN0YXR1cyg0MDUpLmpzb24oeyBlcnJvcjogJ01ldGhvZCBub3QgYWxsb3dlZCcgfSk7CgogICAgY29uc3QgeyB0bywgbWVzc2FnZSB9ID0gcmVxLmJvZHk7CgogICAgaWYgKCF0byB8fCAhbWVzc2FnZSkgewogICAgICAgIHJldHVybiByZXMuc3RhdHVzKDQwMCkuanNvbih7IGVycm9yOiAnTWlzc2luZyByZXF1aXJlZCBmaWVsZHM6IHRvLCBtZXNzYWdlJyB9KTsKICAgIH0KCiAgICAvLyBUd2lsaW8gY3JlZGVudGlhbHMgZnJvbSBWZXJjZWwgZW52aXJvbm1lbnQgdmFyaWFibGVzCiAgICBjb25zdCBhY2NvdW50U2lkID0gcHJvY2Vzcy5lbnYuVFdJTElPX0FDQ09VTlRfU0lEOwogICAgY29uc3QgYXV0aFRva2VuID0gcHJvY2Vzcy5lbnYuVFdJTElPX0FVVEhfVE9LRU47CiAgICBjb25zdCB0d2lsaW9OdW1iZXIgPSBwcm9jZXNzLmVudi5UV0lMSU9fT1VUUkVBQ0hfTlVNQkVSOyAvLyAyMzYgYXJlYSBjb2RlIG51bWJlciBmb3Igb3V0cmVhY2gKCiAgICBpZiAoIWFjY291bnRTaWQgfHwgIWF1dGhUb2tlbiB8fCAhdHdpbGlvTnVtYmVyKSB7CiAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5qc29uKHsgZXJyb3I6ICdUd2lsaW8gbm90IGNvbmZpZ3VyZWQuIFNldCBUV0lMSU9fQUNDT1VOVF9TSUQsIFRXSUxJT19BVVRIX1RPS0VOLCBhbmQgVFdJTElPX09VVFJFQUNIX05VTUJFUiBlbnYgdmFycy4nIH0pOwogICAgfQoKICAgIC8vIEZvcm1hdCBwaG9uZSAoZW5zdXJlICsxIHByZWZpeCBmb3IgQ2FuYWRhKQogICAgY29uc3QgY2xlYW5QaG9uZSA9IHRvLnJlcGxhY2UoL1xEL2csICcnKTsKICAgIGNvbnN0IGZvcm1hdHRlZFBob25lID0gY2xlYW5QaG9uZS5zdGFydHNXaXRoKCcxJykgPyBgKyR7Y2xlYW5QaG9uZX1gIDogYCsxJHtjbGVhblBob25lfWA7CgogICAgY29uc3QgdHdpbGlvVXJsID0gYGh0dHBzOi8vYXBpLnR3aWxpby5jb20vMjAxMC0wNC0wMS9BY2NvdW50cy8ke2FjY291bnRTaWR9L01lc3NhZ2VzLmpzb25gOwogICAgY29uc3QgYXV0aCA9IEJ1ZmZlci5mcm9tKGAke2FjY291bnRTaWR9OiR7YXV0aFRva2VufWApLnRvU3RyaW5nKCdiYXNlNjQnKTsKCiAgICBjb25zdCBwYXJhbXMgPSBuZXcgVVJMU2VhcmNoUGFyYW1zKCk7CiAgICBwYXJhbXMuYXBwZW5kKCdUbycsIGZvcm1hdHRlZFBob25lKTsKICAgIHBhcmFtcy5hcHBlbmQoJ0Zyb20nLCB0d2lsaW9OdW1iZXIpOwogICAgcGFyYW1zLmFwcGVuZCgnQm9keScsIG1lc3NhZ2UpOwoKICAgIHRyeSB7CiAgICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaCh0d2lsaW9VcmwsIHsKICAgICAgICAgICAgbWV0aG9kOiAnUE9TVCcsCiAgICAgICAgICAgIGhlYWRlcnM6IHsKICAgICAgICAgICAgICAgICdBdXRob3JpemF0aW9uJzogYEJhc2ljICR7YXV0aH1gLAogICAgICAgICAgICAgICAgJ0NvbnRlbnQtVHlwZSc6ICdhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQnCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIGJvZHk6IHBhcmFtcy50b1N0cmluZygpCiAgICAgICAgfSk7CgogICAgICAgIGNvbnN0IGRhdGEgPSBhd2FpdCByZXNwb25zZS5qc29uKCk7CgogICAgICAgIGlmIChkYXRhLnNpZCkgewogICAgICAgICAgICByZXR1cm4gcmVzLnN0YXR1cygyMDApLmpzb24oeyBzdWNjZXNzOiB0cnVlLCBzaWQ6IGRhdGEuc2lkLCBzdGF0dXM6IGRhdGEuc3RhdHVzIH0pOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIHJldHVybiByZXMuc3RhdHVzKDQwMCkuanNvbih7IHN1Y2Nlc3M6IGZhbHNlLCBlcnJvcjogZGF0YS5tZXNzYWdlIHx8ICdUd2lsaW8gZXJyb3InLCBjb2RlOiBkYXRhLmNvZGUgfSk7CiAgICAgICAgfQogICAgfSBjYXRjaCAoZXJyb3IpIHsKICAgICAgICBjb25zb2xlLmVycm9yKCdTTVMgZXJyb3I6JywgZXJyb3IpOwogICAgICAgIHJldHVybiByZXMuc3RhdHVzKDUwMCkuanNvbih7IGVycm9yOiAnRmFpbGVkIHRvIHNlbmQgU01TJyB9KTsKICAgIH0KfQo="}
+// Vercel Serverless Function — Outreach SMS via Twilio
+// Sends two-step outreach texts from Mission Control
+
+export default async function handler(req, res) {
+    // CORS
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+    if (req.method === 'OPTIONS') return res.status(200).end();
+    if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+
+    const { to, message } = req.body;
+
+    if (!to || !message) {
+        return res.status(400).json({ error: 'Missing required fields: to, message' });
+    }
+
+    // Twilio credentials from Vercel environment variables
+    const accountSid = process.env.TWILIO_ACCOUNT_SID;
+    const authToken = process.env.TWILIO_AUTH_TOKEN;
+    const twilioNumber = process.env.TWILIO_OUTREACH_NUMBER; // 236 area code number for outreach
+
+    if (!accountSid || !authToken || !twilioNumber) {
+        return res.status(500).json({ error: 'Twilio not configured. Set TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, and TWILIO_OUTREACH_NUMBER env vars.' });
+    }
+
+    // Format phone (ensure +1 prefix for Canada)
+    const cleanPhone = to.replace(/\D/g, '');
+    const formattedPhone = cleanPhone.startsWith('1') ? `+${cleanPhone}` : `+1${cleanPhone}`;
+
+    const twilioUrl = `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`;
+    const auth = Buffer.from(`${accountSid}:${authToken}`).toString('base64');
+
+    const params = new URLSearchParams();
+    params.append('To', formattedPhone);
+    params.append('From', twilioNumber);
+    params.append('Body', message);
+
+    try {
+        const response = await fetch(twilioUrl, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Basic ${auth}`,
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: params.toString()
+        });
+
+        const data = await response.json();
+
+        if (data.sid) {
+            return res.status(200).json({ success: true, sid: data.sid, status: data.status });
+        } else {
+            return res.status(400).json({ success: false, error: data.message || 'Twilio error', code: data.code });
+        }
+    } catch (error) {
+        console.error('SMS error:', error);
+        return res.status(500).json({ error: 'Failed to send SMS' });
+    }
+}

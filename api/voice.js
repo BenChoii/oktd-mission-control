@@ -1,1 +1,20 @@
-{"data":"Ly8gVmVyY2VsIFNlcnZlcmxlc3MgRnVuY3Rpb24g4oCUIFR3aWxpbyBDYWxsIEZvcndhcmRpbmcKLy8gV2hlbiBzb21lb25lIGNhbGxzIHlvdXIgVHdpbGlvIG91dHJlYWNoIG51bWJlciwgaXQgZm9yd2FyZHMgdG8geW91ciBwZXJzb25hbCBwaG9uZQovLyBTZXQgRk9SV0FSRF9UT19QSE9ORSBpbiBWZXJjZWwgZW52IHZhcnMgKHlvdXIgcGVyc29uYWwgbnVtYmVyKQoKZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gaGFuZGxlcihyZXEsIHJlcykgewogICAgcmVzLnNldEhlYWRlcignQ29udGVudC1UeXBlJywgJ3RleHQveG1sJyk7CgogICAgY29uc3QgZm9yd2FyZFRvID0gcHJvY2Vzcy5lbnYuRk9SV0FSRF9UT19QSE9ORSB8fCAnKzEyMzY4ODgwMDAwJzsgLy8gQmVuJ3MgcGVyc29uYWwgbnVtYmVyCgogICAgLy8gVHdpTUw6IGZvcndhcmQgdGhlIGNhbGwgdG8geW91ciBwZXJzb25hbCBwaG9uZQogICAgLy8gVGhlIGNhbGxlciBJRCB3aWxsIHNob3cgdGhlIG9yaWdpbmFsIGNhbGxlcidzIG51bWJlciBzbyB5b3Uga25vdyB3aG8ncyBjYWxsaW5nCiAgICBjb25zdCB0d2ltbCA9IGA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/Pgo8UmVzcG9uc2U+CiAgICA8RGlhbCBjYWxsZXJJZD0iJHtyZXEuYm9keT8uRnJvbSB8fCByZXEucXVlcnk/LkZyb20gfHwgJyd9Ij4KICAgICAgICA8TnVtYmVyPiR7Zm9yd2FyZFRvfTwvTnVtYmVyPgogICAgPC9EaWFsPgo8L1Jlc3BvbnNlPmA7CgogICAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5zZW5kKHR3aW1sKTsKfQo="}
+// Vercel Serverless Function — Twilio Call Forwarding
+// When someone calls your Twilio outreach number, it forwards to your personal phone
+// Set FORWARD_TO_PHONE in Vercel env vars (your personal number)
+
+export default async function handler(req, res) {
+    res.setHeader('Content-Type', 'text/xml');
+
+    const forwardTo = process.env.FORWARD_TO_PHONE || '+12368880000'; // Ben's personal number
+
+    // TwiML: forward the call to your personal phone
+    // The caller ID will show the original caller's number so you know who's calling
+    const twiml = `<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Dial callerId="${req.body?.From || req.query?.From || ''}">
+        <Number>${forwardTo}</Number>
+    </Dial>
+</Response>`;
+
+    return res.status(200).send(twiml);
+}
