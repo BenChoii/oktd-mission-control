@@ -1383,14 +1383,22 @@ function Pipeline({ prospects, messages, onViewConvo, agentDashboard, agentState
     return map;
   }, [messages]);
 
-  // Daily quota (openers sent today)
-  const openersToday = useMemo(() => {
+  // Daily quota bars
+  const { openersToday, pitchesToday } = useMemo(() => {
     const todayStart = new Date(); todayStart.setHours(0,0,0,0);
-    return (messages || []).filter(m => m.messageType === 'opener' && m.direction === 'outbound' && m.sentAt > todayStart.getTime()).length;
+    const ts = todayStart.getTime();
+    const outbound = (messages || []).filter(m => m.direction === 'outbound' && m.sentAt > ts);
+    return {
+      openersToday: outbound.filter(m => m.messageType === 'opener').length,
+      pitchesToday: outbound.filter(m => m.messageType === 'pitch').length,
+    };
   }, [messages]);
-  const DAILY_CAP = 200;
-  const quotaPct = Math.min(100, Math.round((openersToday / DAILY_CAP) * 100));
-  const quotaColor = quotaPct >= 90 ? 'var(--green)' : quotaPct >= 60 ? 'var(--accent)' : quotaPct >= 30 ? 'var(--yellow)' : 'var(--text-dim)';
+  const OPENER_CAP = 200;
+  const PITCH_CAP = 50;
+  const openerPct = Math.min(100, Math.round((openersToday / OPENER_CAP) * 100));
+  const pitchPct  = Math.min(100, Math.round((pitchesToday / PITCH_CAP) * 100));
+  const openerColor = openerPct >= 90 ? 'var(--green)' : openerPct >= 60 ? 'var(--accent)' : openerPct >= 30 ? 'var(--yellow)' : 'var(--text-dim)';
+  const pitchColor  = pitchPct  >= 90 ? 'var(--green)' : pitchPct  >= 60 ? 'var(--accent)' : pitchPct  >= 30 ? 'var(--yellow)' : 'var(--text-dim)';
 
   // Stats — SMS
   const totalProspected = prospects.length;
@@ -1600,14 +1608,22 @@ function Pipeline({ prospects, messages, onViewConvo, agentDashboard, agentState
         </div>
       </div>
 
-      {/* Daily Quota Bar */}
+      {/* Daily Quota Bars */}
       <div className="quota-bar">
-        <div className="quota-bar-label">📱 Today's Outreach</div>
+        <div className="quota-bar-label">📱 Openers</div>
         <div className="quota-bar-track">
-          <div className="quota-bar-fill" style={{ width: `${quotaPct}%`, background: quotaColor }} />
+          <div className="quota-bar-fill" style={{ width: `${openerPct}%`, background: openerColor }} />
         </div>
-        <div className="quota-bar-count" style={{ color: quotaColor }}>{openersToday} / {DAILY_CAP}</div>
-        <div className="quota-bar-pct">{quotaPct}%</div>
+        <div className="quota-bar-count" style={{ color: openerColor }}>{openersToday} / {OPENER_CAP}</div>
+        <div className="quota-bar-pct">{openerPct}%</div>
+      </div>
+      <div className="quota-bar">
+        <div className="quota-bar-label">🎯 Pitches</div>
+        <div className="quota-bar-track">
+          <div className="quota-bar-fill" style={{ width: `${pitchPct}%`, background: pitchColor }} />
+        </div>
+        <div className="quota-bar-count" style={{ color: pitchColor }}>{pitchesToday} / {PITCH_CAP}</div>
+        <div className="quota-bar-pct">{pitchPct}%</div>
       </div>
 
       {/* Agent Activity */}
